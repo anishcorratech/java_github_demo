@@ -1,2 +1,3 @@
-# java_github_demo
+# Workflow for Java
+
 Github Actions workflow for a simple  java application
