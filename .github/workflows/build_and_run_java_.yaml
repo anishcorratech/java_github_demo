@@ -1,0 +1,21 @@
+name: GitHub Actions Java Workflow
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Build-and-Run-Java-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lets checkout our java code before build
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Lets compile our Java Code
+        run: |
+          cd src/java_demo/app1/
+          javac hello_world.java
+          
+      - name: Lets run our Java bytecode
+        run: |
+          cd src/java_demo/app1/
+          java HelloWorld
